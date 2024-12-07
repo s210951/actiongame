@@ -10,11 +10,21 @@ The document is created by the development team as result of collaboration betwe
 ---
 ## Characters
 
+### Deep system of character customization
+
 ---
 ## Level/environment design
 
+### Random Level Generation
+
+Things are just going to get boring very quickly if you play through the same thing a thousand times
+
 ---
-## Gameplay
+## Gameplay/Mechanics
+
+### Action Combat
+
+### Random Item System
 
 ---
 ## Art
