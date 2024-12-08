@@ -13,3 +13,7 @@ config_version=5
 config/name="actiongame"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[navigation]
+
+3d/default_cell_height=0.01
