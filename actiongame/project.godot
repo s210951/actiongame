@@ -14,3 +14,7 @@ config/name="actiongame"
 run/main_scene="res://scenes/world/world.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[navigation]
+
+3d/default_cell_height=0.01
