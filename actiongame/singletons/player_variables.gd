@@ -1,3 +1,6 @@
-extends Object
+extends Node
 
-var test = "abc"
+var instance: Instance = null
+
+class Instance:
+	var health = 0
