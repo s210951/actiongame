@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cyq7hg0lmfv1p"]
+[gd_scene load_steps=7 format=3 uid="uid://cyq7hg0lmfv1p"]
 
 [ext_resource type="PackedScene" uid="uid://j1vygjqtmyud" path="res://scenes/player/player.tscn" id="1_u6ea3"]
+[ext_resource type="PackedScene" uid="uid://djbfrne6c8xlp" path="res://scenes/camera/camera.tscn" id="2_rmdgq"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_gxvgq"]
 
@@ -29,8 +30,7 @@ shape = SubResource("BoxShape3D_utp7c")
 
 [node name="Player" parent="." instance=ExtResource("1_u6ea3")]
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.867713, 0.497065, 0, -0.497065, 0.867713, 0, 6.50112, 9.54921)
+[node name="Camera3D" parent="." instance=ExtResource("2_rmdgq")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.855328, -0.430793, 0.287804, 0, 0.555512, 0.831508, -0.518087, -0.711212, 0.475145, 0, 6.77126, 0)
