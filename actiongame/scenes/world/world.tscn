@@ -1,3 +1,36 @@
-[gd_scene format=3 uid="uid://cyq7hg0lmfv1p"]
+[gd_scene load_steps=6 format=3 uid="uid://cyq7hg0lmfv1p"]
+
+[ext_resource type="PackedScene" uid="uid://j1vygjqtmyud" path="res://scenes/player/player.tscn" id="1_u6ea3"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_gxvgq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wl411"]
+albedo_color = Color(0.1015, 0.29, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1h7lj"]
+material = SubResource("StandardMaterial3D_wl411")
+size = Vector2(16, 16)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_utp7c"]
+size = Vector3(16, 0.01, 16)
 
 [node name="World" type="Node3D"]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_gxvgq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D"]
+mesh = SubResource("PlaneMesh_1h7lj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_utp7c")
+
+[node name="Player" parent="." instance=ExtResource("1_u6ea3")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.867713, 0.497065, 0, -0.497065, 0.867713, 0, 6.50112, 9.54921)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.855328, -0.430793, 0.287804, 0, 0.555512, 0.831508, -0.518087, -0.711212, 0.475145, 0, 6.77126, 0)
