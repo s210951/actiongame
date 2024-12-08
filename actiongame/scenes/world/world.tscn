@@ -4,9 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://djbfrne6c8xlp" path="res://scenes/camera/camera.tscn" id="2_rmdgq"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_gxvgq"]
-vertices = PackedVector3Array(-7.5, 0.02, -7.5, -7.5, 0.02, 7.5, 7.5, 0.02, 7.5, 7.5, 0.02, -7.5)
+vertices = PackedVector3Array(-7.5, 0.5, -7.5, -7.5, 0.5, 7.5, 7.5, 0.5, 7.5, 7.5, 0.5, -7.5)
 polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
-cell_height = 0.01
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wl411"]
 albedo_color = Color(0.1015, 0.29, 0, 1)
@@ -31,7 +30,7 @@ mesh = SubResource("PlaneMesh_1h7lj")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D"]
 shape = SubResource("BoxShape3D_utp7c")
 
-[node name="Player" parent="." instance=ExtResource("1_u6ea3")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("1_u6ea3")]
 
 [node name="Camera3D" parent="." instance=ExtResource("2_rmdgq")]
 
